@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+   android:id="@+id/lblcon"
+   android:text="Contact"
+    />
+<TableLayout 
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:id="@+id/tl"
+>
+<TableRow 
+  android:id="@+id/r1"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+>
+<TextView 
+  android:id="@+id/lblnm"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="Name:"
+  />
+<EditText 
+  android:id="@+id/txtnm"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  />
+</TableRow>
+<TableRow 
+  android:id="@+id/r2"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+>
+<TextView 
+  android:id="@+id/lblnum"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="Number:"
+  />
+<EditText 
+  android:id="@+id/txtnum"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  />
+</TableRow>
+</TableLayout>
+<Button 
+  android:id="@+id/cmdsave"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="Save"
+  />
+<Button 
+  android:id="@+id/cmdhome"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:text="Home"
+  />
+</LinearLayout>
+
