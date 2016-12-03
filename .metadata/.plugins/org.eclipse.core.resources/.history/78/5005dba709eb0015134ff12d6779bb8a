@@ -1,0 +1,36 @@
+package com.example.Stest;
+
+import android.os.Bundle;
+import android.app.Activity;
+
+import android.view.*;
+import android.widget.*;
+import android.content.*;
+import java.util.*;
+
+public class First extends Activity {
+
+	TextView tv;
+	List lst;
+	Button btn;
+	Second s;
+	ArrayList<String> al1=new ArrayList<String>();
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_first);
+	
+	tv=(TextView) findViewById(R.id.textView1);
+	lst=(List) findViewById(R.id.listView1);
+	s=new Second(al1, this);
+	lv1.setAdapter(s);
+
+	btn.setOnClickListener(this);
+	
+    }		
+	
+
+	
+	}
+

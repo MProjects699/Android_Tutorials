@@ -1,0 +1,72 @@
+package com.example.app7;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.*;
+import android.widget.*;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		Button btn1=(Button) findViewById(R.id.button1);
+		btn1.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				DisplayToast("You have clicked the open button");
+				
+			}
+		});
+		
+		Button btn2=(Button) findViewById(R.id.button2);
+		btn2.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				DisplayToast("Yoy have clicked the save button");
+				
+			}
+		});
+		
+		CheckBox cb=(CheckBox) findViewById(R.id.checkBox1);
+		cb.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if(((CheckBox)v).isChecked())
+					DisplayToast("CheckBox is Checked");
+				else
+					DisplayToast("CheckBox is unchecked");
+				
+			}
+		});
+		
+		RadioGroup rg=(RadioGroup) findViewById(R.id.radioGroup1);
+		rg.setOnCheckedChangeListener(new OnCheckedChangeListener()
+		{
+			public void onCheckedChangeListener(RadioGroup group, int checked)
+			RadioButton rb=(RadioButton) findViewById(R.id.radio1);
+			{
+				if(rb.isChecked())
+				{
+					DisplayToast("Option1 is checked");
+				}
+				else
+				{
+					DisplayToast("Option2 is checked");
+				}
+			}
+		});
+		
+	}
+	
+	private void DisplayToast(String msg)
+	{
+		Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT).show();
+	}
+
+	}

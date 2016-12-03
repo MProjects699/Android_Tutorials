@@ -1,0 +1,17 @@
+package com.example.Stest;
+
+import android.os.Bundle;
+
+import android.app.Activity;
+import android.view.*;
+import android.widget.*;
+
+public class Second extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_second);
+	}
+
+	}

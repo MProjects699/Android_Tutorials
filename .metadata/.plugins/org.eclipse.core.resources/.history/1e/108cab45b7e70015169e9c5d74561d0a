@@ -1,0 +1,99 @@
+package com.Solitaire.Basicview;
+
+import android.os.Bundle;
+import android.app.Activity;
+
+import android.view.*;
+import android.widget.*;
+import android.widget.RadioGroup.OnCheckedChangeListener;
+
+public class MainActivity extends Activity {
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	
+	//--Button view--
+		Button btn1=(Button) findViewById(R.id.button1);
+		btn1.setOnClickListener(new View.OnClickListener() 
+		{
+			public void onClick(View v)
+			{
+				DisplayToast("");
+			}
+			
+		});
+		
+	
+	//--Button view--
+			Button btn2=(Button) findViewById(R.id.button1);
+			btn2.setOnClickListener(new View.OnClickListener() 
+			{
+				public void onClick(View v)
+				{
+					DisplayToast("");
+				}
+				
+			});
+	
+			//--CheckBox--
+			CheckBox chk=(CheckBox) findViewById(R.id.checkBox1);
+			chk.setOnClickListener(new View.OnClickListener() 
+			{
+				public void onClick(View v)
+				{
+				    if(((CheckBox)v).isChecked())
+				    	DisplayToast("");
+				    else
+				    	DisplayToast("");
+				}
+			});
+			
+			//--RadioButton--
+			RadioGroup rgp=(RadioGroup) findViewById(R.id.Option);
+			rgp.setOnCheckedChangeListener(new OnCheckedChangeListener()
+			
+			{
+				public Void OnCheckedChanged(RadioGroup group,int checked)
+				{
+					RadioButton rbtn=(RadioButton) findViewById(R.id.radio1);
+					
+					if(rbtn.isChecked())
+					{
+						DisplayToast("");
+					}
+					else
+					{
+						DisplayToast("");
+					}
+				}
+			}
+					);
+				
+				
+			
+			//--Toggle Button--
+			ToggleButton tbtn=(ToggleButton) findViewById(R.id.toggleButton1);
+			tbtn.setOnClickListener(new View.OnClickListener() 
+			{
+				
+				@Override
+				public void onClick(View v) 
+				{
+					if(((ToggleButton)v).isChecked())
+					    DisplayToast("");
+					else
+						DisplayToast("");
+					
+				}
+			});
+				
+	}
+	
+				private void DisplayToast(String string) {
+				// TODO Auto-generated method stub
+				
+			}
+	
+}

@@ -1,0 +1,6 @@
+
+    <resources>
+        <declare-styeable name="Gallery1">
+            <attr name="android:galleryItemBackground" />
+        </declare-styeable>
+    </resources>

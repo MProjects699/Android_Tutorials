@@ -1,0 +1,30 @@
+package com.example.app14;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.*;
+import android.widget.AdapterView;
+import android.content.res.TypedArray;
+import android.content.Context;
+
+public class MainActivity extends Activity {
+
+	//the image to display
+	Integer[] img={R.drawable.ic_launcher,
+			R.drawable.ic_launcher,
+			R.drawable.ic_launcher,
+			R.drawable.ic_launcher,
+			R.drawable.ic_launcher,
+			R.drawable.ic_launcher
+	};
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		Gallery gry=(Gallery) findViewById(R.id.gallery1);
+		gry.setAdapter(new ImageAdapter(this));
+		
+	}
+}

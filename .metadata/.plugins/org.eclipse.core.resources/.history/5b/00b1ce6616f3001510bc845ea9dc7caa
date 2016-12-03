@@ -1,0 +1,7 @@
+package com.example.app34;
+
+import android.preference.Preference;
+
+public class Preferences extends Preference {
+
+}

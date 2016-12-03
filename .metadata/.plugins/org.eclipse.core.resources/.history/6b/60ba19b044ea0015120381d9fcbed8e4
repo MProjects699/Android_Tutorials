@@ -1,0 +1,45 @@
+package com.Soliaire.Usingintent2;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.*;
+import android.content.*;
+import android.widget.*;
+
+public class First extends Activity {
+
+	EditText et;
+	Button btn;
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_second);
+
+		et=(EditText) findViewById(R.id.editText1);
+		btn=(Button) findViewById(R.id.button1);
+		btn.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		}
+		
+		public void onClick(View view)
+		{
+			Intent data=new Intent("com.Soliaire.Usingintent2.First");
+		
+
+		//set the data to pass back--
+		String name=et.getText().toString();
+		data.putExtra("key", name);
+		startActivity(data);
+		
+	
+	}
+
+}
